@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user_management',
     'social_django',
+    'travel_management',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'travel_desk',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'venu',
         'HOST': 'localhost',
         'PORT': '3306',
     }

@@ -20,7 +20,7 @@ def get_ip(request):
 
 def signin_with_google(request):
     if request.user.is_authenticated:
-        return redirect('/')
+        return redirect('/dashboard')
     else:
         return render(request, 'user_management/signin_with_google.html')
 
@@ -28,7 +28,7 @@ def signin_with_google(request):
 def after_signin_with_google(request):
     if request.user.is_authenticated:
         UserAuthLogs.objects.create(user_id=request.user.id, login_time=datetime.now(), ip_address=get_ip(request),session_key=request.session.session_key)
-        return redirect('/')
+        return redirect('/dashboard')
     else:
         messages.error(request,'error')
         return HttpResponseRedirect('/')
