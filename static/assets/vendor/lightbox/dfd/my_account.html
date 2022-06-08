@@ -1,0 +1,184 @@
+{% extends 'user/base.html' %}
+{% block body %}
+{% load staticfiles %}
+<style>
+p{
+text-align:justify;
+}
+</style>
+    <!-- start Main Wrapper -->
+    <div class="main-wrapper scrollspy-container">
+
+        <div class="breadcrumb-wrapper">
+
+            <div class="container">
+
+                <h1 class="page-title">My Account</h1>
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-8">
+                        <ol class="breadcrumb">
+                            <li><a href="/">Home</a></li>
+                            <li class="active">My Account</li>
+                        </ol>
+                    </div>
+
+                   <!--  <div class="col-xs-12 col-sm-4 hidden-xs">
+                        <p class="hot-line"> <i class="fa fa-phone"></i> +91-9908949658</p>
+                    </div> -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container pt-60 pb-70">
+
+         <!-- Grid row -->
+        <div class="row">
+        <!-- Grid column -->
+
+        <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">User Account Details</div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" class="">
+                            {% for i in my_account %}
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                            <label>First Name</label>
+                                        </div>
+{#                                        {{ i.first_name }}#}
+                                        <input type="button" id="username" name="first_name" value="{{ i.first_name }}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                        <label>Last Name</label>
+                                    </div>
+                                    <input type="button" id="username" name="last_name" value="{{ i.last_name }}" class="form-control">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-mobile"></i>
+                                            <label>Mobile</label>
+                                        </div>
+                                        <input type="button" id="username" name="last_name" value="{{ i.mobile }}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-envelop"></i>
+                                            <label>Email</label>
+                                        </div>
+                                        <input type="button" id="username" name="last_name" value="{{ i.email }}" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-university"></i>
+                                            <label>College Name</label>
+                                        </div>
+                                        <input type="button" id="username" name="last_name" value="{{ i.college__name }}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-book"></i>
+                                            <label>Qualification</label>
+                                        </div>
+                                        <input type="button" id="username" name="last_name" value="{{ i.qualification__name }}" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-sort-numeric-up"></i>
+                                            <label>Roll Number</label>
+                                        </div>
+                                        <input type="button" id="username" name="last_name" value="{{ i.roll_number }}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-book"></i>
+                                            <label>Specialization</label>
+                                        </div>
+                                        <input type="button" id="username" name="last_name" value="{{ i.specialization__name }}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-book"></i>
+                                            <label>Course</label>
+                                        </div>
+                                        <input type="button" id="username" name="last_name" value="{{ i.course__name }}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                </div>
+                            </div>
+                                <br>
+                            <div class="form-row">
+{#                            <div class="form-actions form-group">#}
+{#                                <button type="submit" class="btn btn-success btn-sm">Submit</button>#}
+{#                            </div>#}
+                            </div>
+                            {% endfor %}
+                        </form>
+						</div>
+                </div>
+            </div>
+		<div class="col-lg-12">
+			<div class="main-wrapper scrollspy-container">
+                        <div class="container">
+							<h4 style="text-align: left">List of Courses Applied</h4>
+                         {% for i in course %}
+                             
+                             <img class="card-img-top" style="width:286px; height:180px;"src="/static/images/courses/{{ i.skill__image }}" alt="Card image cap">
+                             <a href="/course_videos/{{ i.skill_id }}"><h4 class="card-title mb-3" style="color:#0D7CC9;"><strong>{{ i.skill__name }} -  Course Videos</strong></h4></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+		</div>
+            </div>
+
+</div>
+</div>
+
+
+
+
+        </div>
+
+    </div>
+		<!-- end Main Wrapper -->
+{% endblock %}}

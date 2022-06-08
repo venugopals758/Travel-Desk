@@ -1,0 +1,199 @@
+/*
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+font-family: "Poppins", sans-serif;
+
+*/
+/*@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0px;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cdcdcd;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+body {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    /*    font-family: 'Nunito', sans-serif;*/
+    font-family: "Poppins", sans-serif;
+    background: #FCFBF9;
+}
+
+#wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0% auto;
+}
+
+.sa-login {
+    width: 100%;
+    height: 100vh;
+    background: #FCFBF9;
+    position: relative;
+    z-index: 1;
+}
+
+.sa-login:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -100px;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background: url(../img/bg_img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1.2);
+}
+
+.sa-login .sa-img {
+    width: 40%;
+}
+
+.sa-login .sa-img img {
+    width: 100%;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.sub-heading {
+    font-size: 16px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 500;
+}
+
+.sub-heading span {
+    width: 50px;
+    height: 3px;
+    background: #E42428;
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    top: -4px;
+}
+
+.gitam {
+    width: 220px;
+    position: relative;
+    top: 10px;
+}
+
+.gitam img {
+    width: 100%;
+}
+
+.content p {
+    font-size: 20px;
+    color: #818181;
+}
+
+.content .sa-btn {
+    background: #E42428;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.inner-content {
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 991px) {
+    .sa-login .sa-img {
+        width: 50%;
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        z-index: -1;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .content {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(7px);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .sub-heading {
+        font-size: 12px;
+    }
+
+    .sub-heading span {
+        height: 2px;
+        top: -3px;
+    }
+
+    .heading {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .inner-content {
+        margin-top: 50px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+}
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="https://www.gitam.edu/assets/images/favicon.ico" type="image/x-icon" />
+    <title>GITAM Deemed to be University</title>
+    <link rel="stylesheet" href="{% static '/login_page/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static '/login_page/css/style.css' %}">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="sa-login">
+            <div class="container">
+                {%  for message in messages %}
+                    <div class="alert" style="color: white" >
+                        <a class="close" href="#" data-dismiss="alert"></a>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="gitam">
+                        <img src="{% static '/login_page/img/GITAM-logo.png' %}" alt="">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mt-5 d-lg-flex align-items-center justify-content-between">
+                            <div class="content">
+                                <h6 class="sub-heading"><span></span>Welcome to</h6>
+                                <h1 class="heading">TRAVEL DESK</h1>
+                                <div class="inner-content">
+                                    <p>Using your University issued Email account.</p>
+                                    <a href="{% url "social:begin" "google-oauth2" %}"  class="sa-btn">Login</a>
+                                </div>
+                            </div>
+                            <div class="sa-img">
+                                <!--img src="{% static '/login_page/img/Gitam_login_image.svg' %}" alt=""-->
+                                <!--img src="https://www.eaglelogisticompany.com/img/insending.gif" alt=""-->
+                                <img src="https://cdn.dribbble.com/users/722246/screenshots/9714311/animation-loading.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
